@@ -1,0 +1,33 @@
+footer {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  height: 1.2rem;
+  z-index: 1000;
+  background-color: #fff;
+  border-top: 0.2rem solid #d5d5d5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer a {
+  display: block;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+footer a i {
+  font-size: 0.5rem;
+  text-align: center;
+}
+footer a span {
+  font-size: 0.3rem;
+  line-height: 5rem;
+}
+footer a.active {
+  color: orange;
+  font-size: bold;
+}

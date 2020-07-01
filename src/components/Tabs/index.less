@@ -1,0 +1,33 @@
+footer{
+    position: fixed;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    height: 1.2rem;
+    z-index: 1000;
+    background-color: #fff;
+    border-top: 0.2rem solid #d5d5d5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a{
+        display: block;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        i{
+            font-size: .5rem;
+            text-align: center;
+        }
+        span{
+            font-size: .3rem;
+            line-height: 5rem;
+        }
+        &.active{
+            color: orange;
+            font-size: bold;
+        }
+    }
+}

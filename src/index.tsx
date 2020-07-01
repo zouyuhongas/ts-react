@@ -10,7 +10,8 @@ import Home from './router/Home';
 import Mine from './router/Mine';
 import Profile from './router/Profile';
 import { ConnectedRouter } from "connected-react-router";
-import history from '@/history'
+import history from '@/history';
+import Tabs from '@/components/Tabs';
 reactDom.render(
  <Provider store={store}>
      <ConnectedRouter history={history}>
@@ -19,9 +20,10 @@ reactDom.render(
                 <Switch>
                     <Route path='/' exact component={Home}></Route>
                     <Route path='/mine' exact component={Mine}></Route>
-                    <Route path='profile' exact component={Profile}></Route>
+                    <Route path='/profile' exact component={Profile}></Route>
                 </Switch>
             </main>
+            <Tabs />
         </ConfigProvider>
      </ConnectedRouter>
  </Provider>
