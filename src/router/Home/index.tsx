@@ -6,11 +6,15 @@ import { connect } from 'react-redux';
 import { CombinedState } from '@/typings/state'
 import {HomeState} from '@/typings/state';
 import mapDispatchToProps from '@/store/actions/home';
-type Props = PropsWithChildren<RouteComponentProps & ReturnType<typeof mapStateToProps> & typeof     mapDispatchToProps>;
+type Props = PropsWithChildren<RouteComponentProps & ReturnType<typeof mapStateToProps> & typeof mapDispatchToProps>;
 
 function Home(props: Props) {
     return (
-        <HomeHeader />
+        //把当前的状态和方法通过redux里面进行收集传进组件里面去了
+        <HomeHeader 
+        currentCategory = {props.currentCategory}
+        setCurrentCategory={props.setCurrentCategory}
+        />
     )
 }
 const mapStateToProps = (state:CombinedState):HomeState=>state.home;
